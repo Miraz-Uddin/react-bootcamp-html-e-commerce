@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scale | Web Application</title>
+    <meta
+      name="description"
+      content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="css/app.v1.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="js/datepicker/datepicker.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="js/slider/slider.css" type="text/css" />
+    <link rel="stylesheet" href="js/chosen/chosen.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="js/spinner/jquery.bootstrap-touchspin.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="js/typehead/typehead.css" type="text/css" />
+    <!--[if lt IE 9]>
+      <script src="js/ie/html5shiv.js"></script>
+      <script src="js/ie/respond.min.js"></script>
+      <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
+  </head>
+  <body class="">
+    <section class="vbox">
+      <header
+        class="bg-white header header-md navbar navbar-fixed-top-xs box-shadow"
+      >
+        <div class="navbar-header aside-md dk">
+          <a
+            class="btn btn-link visible-xs"
+            data-toggle="class:nav-off-screen,open"
+            data-target="#nav,html"
+          >
+            <i class="fa fa-bars"></i>
+          </a>
+          <a href="dashboard.html" class="navbar-brand">
+            <img src="images/logo.png" class="m-r-sm" alt="scale" />
+            <span class="hidden-nav-xs">Scale</span>
+          </a>
+          <a
+            class="btn btn-link visible-xs"
+            data-toggle="dropdown"
+            data-target=".user"
+          >
+            <i class="fa fa-cog"></i>
+          </a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+          <li class="hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="i i-chat3"></i>
+              <span class="badge badge-sm up bg-danger count">2</span>
+            </a>
+            <section class="dropdown-menu aside-xl animated flipInY">
+              <section class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong
+                    >You have <span class="count">2</span> notifications</strong
+                  >
+                </div>
+                <div class="list-group list-group-alt">
+                  <a href="#" class="media list-group-item">
+                    <span class="pull-left thumb-sm">
+                      <img src="images/a0.png" alt="..." class="img-circle" />
+                    </span>
+                    <span class="media-body block m-b-none">
+                      Use awesome animate.css<br />
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                  </a>
+                  <a href="#" class="media list-group-item">
+                    <span class="media-body block m-b-none">
+                      1.0 initial released<br />
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href="#" class="pull-right"><i class="fa fa-cog"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight"
+                    >See all the notifications</a
+                  >
+                </div>
+              </section>
+            </section>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-left">
+                <img src="images/a0.png" alt="..." />
+              </span>
+              John.Smith <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">
+              <li><span class="arrow top"></span> <a href="#">Settings</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li>
+                <a href="#">
+                  <span class="badge bg-danger pull-right">3</span>
+                  Notifications
+                </a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <a href="modal.lockme.html" data-toggle="ajaxModal">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+      <section>
+        <section class="hbox stretch">
+          <!-- .aside -->
+          <aside class="bg-black aside-md hidden-print hidden-xs" id="nav">
+            <section class="vbox">
+              <section class="w-f scrollable">
+                <div
+                  class="slim-scroll"
+                  data-height="auto"
+                  data-disable-fade-out="true"
+                  data-distance="0"
+                  data-size="10px"
+                  data-railOpacity="0.2"
+                >
+                  <div class="clearfix wrapper dk nav-user hidden-xs">
+                    <div class="dropdown">
+                      <a
+                        href="#"
+                        class="dropdown-toggle"
+                        data-toggle="dropdown"
+                      >
+                        <span class="thumb avatar pull-left m-r">
+                          <img src="images/a0.png" class="dker" alt="..." />
+                          <i class="on md b-black"></i>
+                        </span>
+                        <span class="hidden-nav-xs clear">
+                          <span class="block m-t-xs">
+                            <strong class="font-bold text-lt"
+                              >John.Smith</strong
+                            >
+                            <b class="caret"></b>
+                          </span>
+                          <span class="text-muted text-xs block"
+                            >Art Director</span
+                          >
+                        </span>
+                      </a>
+                      <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li>
+                          <span class="arrow top hidden-nav-xs"></span>
+                          <a href="#">Settings</a>
+                        </li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li>
+                          <a href="#">
+                            <span class="badge bg-danger pull-right">3</span>
+                            Notifications
+                          </a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li>
+                          <a href="modal.lockme.html" data-toggle="ajaxModal"
+                            >Logout</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- nav -->
+                  <nav class="nav-primary hidden-xs">
+                    <ul class="nav nav-main" data-ride="collapse">
+                      <li>
+                        <a href="dashboard.html" class="auto">
+                          <i class="i i-statistics icon"> </i>
+                          <span class="font-bold">Overview</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="auto">
+                          <span class="pull-right text-muted">
+                            <i class="i i-circle-sm-o text"></i>
+                            <i class="i i-circle-sm text-active"></i>
+                          </span>
+                          <i class="fa fa-users icon"> </i>
+                          <span class="font-bold">Users</span>
+                        </a>
+                        <ul class="nav dk">
+                          <li>
+                            <a href="add-user.html" class="auto">
+                              <i class="i i-dot"></i>
+                              <span>Create New User</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="users.html" class="auto">
+                              <i class="i i-dot"></i> <span>Users List</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="active">
+                        <a href="#" class="auto">
+                          <span class="pull-right text-muted">
+                            <i class="i i-circle-sm-o text"></i>
+                            <i class="i i-circle-sm text-active"></i>
+                          </span>
+                          <i class="fa fa-bolt icon"> </i>
+                          <span class="font-bold">Products</span>
+                        </a>
+                        <ul class="nav dk">
+                          <li class="active">
+                            <a href="add-product.html" class="auto">
+                              <i class="i i-dot"></i>
+                              <span>Add New Product</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="products.html" class="auto">
+                              <i class="i i-dot"></i> <span>Products List</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#" class="auto">
+                          <span class="pull-right text-muted">
+                            <i class="i i-circle-sm-o text"></i>
+                            <i class="i i-circle-sm text-active"></i>
+                          </span>
+                          <i class="i i-params icon"> </i>
+                          <span class="font-bold">Categories</span>
+                        </a>
+                        <ul class="nav dk">
+                          <li>
+                            <a href="add-category.html" class="auto">
+                              <i class="i i-dot"></i>
+                              <span>Add Category</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="categories.html" class="auto">
+                              <i class="i i-dot"></i>
+                              <span>Categories List</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#" class="auto">
+                          <span class="pull-right text-muted">
+                            <i class="i i-circle-sm-o text"></i>
+                            <i class="i i-circle-sm text-active"></i>
+                          </span>
+                          <i class="fa fa-briefcase icon"> </i>
+                          <span class="font-bold">Orders</span>
+                        </a>
+                        <ul class="nav dk">
+                          <li>
+                            <a href="add-order.html" class="auto">
+                              <i class="i i-dot"></i>
+                              <span>Create New Order</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="orders.html" class="auto">
+                              <i class="i i-dot"></i>
+                              <span>All Orders</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="line dk hidden-nav-xs"></div>
+                    <div
+                      class="text-muted text-xs hidden-nav-xs padder m-t-sm m-b-sm"
+                    >
+                      Settings
+                    </div>
+                    <ul class="nav"></ul>
+                    <ul class="nav nav-main" data-ride="collapse">
+                      <li>
+                        <a href="#" class="auto">
+                          <span class="pull-right text-muted">
+                            <i class="i i-circle-sm-o text"></i>
+                            <i class="i i-circle-sm text-active"></i>
+                          </span>
+                          <i class="i i-grid2 icon"> </i>
+                          <span class="font-bold">Apps</span>
+                        </a>
+                        <ul class="nav dk">
+                          <li>
+                            <a href="media.html" class="auto">
+                              <i class="i i-dot"></i> <span>Media</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#" class="auto">
+                          <span class="pull-right text-muted">
+                            <i class="i i-circle-sm-o text"></i>
+                            <i class="i i-circle-sm text-active"></i>
+                          </span>
+                          <i class="i i-docs icon"> </i>
+                          <span class="font-bold">Additional Pages</span>
+                        </a>
+                        <ul class="nav dk">
+                          <li>
+                            <a href="profile.html" class="auto">
+                              <i class="i i-dot"></i> <span>Profile</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="invoice.html" class="auto">
+                              <i class="i i-dot"></i> <span>Invoice</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="signin.html" class="auto">
+                              <i class="i i-dot"></i> <span>Signin</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="signup.html" class="auto">
+                              <i class="i i-dot"></i> <span>Signup</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="404.html" class="auto">
+                              <i class="i i-dot"></i> <span>404</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- / nav -->
+                </div>
+              </section>
+              <footer class="footer hidden-xs no-padder text-center-nav-xs">
+                <a
+                  href="modal.lockme.html"
+                  data-toggle="ajaxModal"
+                  class="btn btn-icon icon-muted btn-inactive pull-right m-l-xs m-r-xs hidden-nav-xs"
+                >
+                  <i class="i i-logout"></i>
+                </a>
+                <a
+                  href="#nav"
+                  data-toggle="class:nav-xs"
+                  class="btn btn-icon icon-muted btn-inactive m-l-xs m-r-xs"
+                >
+                  <i class="i i-circleleft text"></i>
+                  <i class="i i-circleright text-active"></i>
+                </a>
+              </footer>
+            </section>
+          </aside>
+          <!-- /.aside -->
+          <section id="content">
+            <section class="vbox">
+              <section class="scrollable padder">
+                <div class="m-b-md"><h3 class="m-b-none">Add Product</h3></div>
+                <section class="panel panel-default">
+                  <header class="panel-heading font-bold">
+                    Please Fill All Required Fields to Create a User
+                  </header>
+                  <div class="panel-body">
+                    <form class="form-horizontal" method="get">
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label"
+                          >Choose Category</label
+                        >
+                        <div class="col-sm-10">
+                          <select
+                            style="width: 100%"
+                            multiple
+                            class="chosen-select"
+                          >
+                            <option value="MF">Men's Fashion</option>
+                            <option value="WF">Women's Fashion</option>
+                            <option value="WD">Winter Dress</option>
+                            <option value="SC">Summer Collection</option>
+                            <option value="CC">Child's Care</option>
+                            <option value="EG">Electronic Gadgets</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-id-1">
+                          Product Name</label
+                        >
+                        <div class="col-sm-10">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="input-id-1"
+                            placeholder="Enter Product Name"
+                          />
+                          <span class="help-block m-b-none"
+                            >Name Should have At least 3 Characters</span
+                          >
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-id-2"
+                          >Product Slug</label
+                        >
+                        <div class="col-sm-10">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="input-id-2"
+                            placeholder="e.g: mens-purple-panjabi"
+                          />
+                          <span class="help-block m-b-none"
+                            >Slug Should have followed skeleton case
+                            format</span
+                          >
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-id-3"
+                          >Product Code</label
+                        >
+                        <div class="col-sm-10">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="input-id-3"
+                            placeholder="e.g: DA000000025"
+                          />
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Price</label>
+                        <div class="col-sm-10">
+                          <div>
+                            <input
+                              type="text"
+                              value="0"
+                              class="form-control"
+                              data-ride="spinner"
+                              data-min="0"
+                              data-max="10"
+                              data-step="0.1"
+                              data-decimals="2"
+                              data-prefix="$"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Discount</label>
+                        <div class="col-sm-10">
+                          <div>
+                            <input
+                              type="text"
+                              value="5"
+                              class="form-control"
+                              data-ride="spinner"
+                              data-min="0"
+                              data-max="10"
+                              data-step="0.1"
+                              data-decimals="2"
+                              data-postfix="%"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label"
+                          >Size Variant</label
+                        >
+                        <div class="col-sm-10">
+                          <label class="radio-inline">
+                            <input
+                              type="radio"
+                              id="inlineCheckbox1"
+                              value="male"
+                              name="size"
+                            />
+                            XXL
+                          </label>
+                          <label class="checkbox-inline">
+                            <input
+                              type="radio"
+                              id="inlineCheckbox2"
+                              value="option2"
+                              name="size"
+                            />
+                            XL
+                          </label>
+                          <label class="checkbox-inline">
+                            <input
+                              type="radio"
+                              id="inlineCheckbox3"
+                              value="option3"
+                              name="size"
+                            />
+                            L
+                          </label>
+                          <label class="checkbox-inline">
+                            <input
+                              type="radio"
+                              id="inlineCheckbox4"
+                              value="option4"
+                              name="size"
+                            />
+                            M
+                          </label>
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label"
+                          >Color Variant</label
+                        >
+                        <div class="col-sm-10">
+                          <label class="checkbox-inline i-checks">
+                            <input
+                              type="checkbox"
+                              id="inlineCheckbox1"
+                              value="option1"
+                            /><i></i> Yellow
+                          </label>
+                          <label class="checkbox-inline i-checks">
+                            <input
+                              type="checkbox"
+                              id="inlineCheckbox2"
+                              value="option2"
+                            /><i></i> Blue
+                          </label>
+                          <label class="checkbox-inline i-checks">
+                            <input
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            /><i></i> Green
+                          </label>
+                          <label class="checkbox-inline i-checks">
+                            <input
+                              type="checkbox"
+                              id="inlineCheckbox4"
+                              value="option4"
+                            /><i></i> Purple
+                          </label>
+                          <label class="checkbox-inline i-checks">
+                            <input
+                              type="checkbox"
+                              id="inlineCheckbox4"
+                              value="option4"
+                            /><i></i> Grey
+                          </label>
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label"
+                          >Availability</label
+                        >
+                        <div class="col-sm-10">
+                          <label class="switch">
+                            <input type="checkbox" /> <span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label"
+                          >Product Photos</label
+                        >
+                        <div class="col-sm-10">
+                          <input
+                            type="file"
+                            class="filestyle"
+                            data-icon="false"
+                            data-classButton="btn btn-default"
+                            data-classInput="form-control inline v-middle input-s"
+                            multiple
+                          />
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label"
+                          >Short Description</label
+                        >
+                        <div class="col-sm-10">
+                          <div
+                            class="btn-toolbar m-b-sm btn-editor"
+                            data-role="editor-toolbar"
+                            data-target="#editor"
+                          >
+                            <div class="btn-group">
+                              <a
+                                class="btn btn-default btn-sm dropdown-toggle"
+                                data-toggle="dropdown"
+                                title="Font"
+                                ><i class="fa fa-font"></i><b class="caret"></b
+                              ></a>
+                              <ul class="dropdown-menu"></ul>
+                            </div>
+                            <div class="btn-group">
+                              <a
+                                class="btn btn-default btn-sm dropdown-toggle"
+                                data-toggle="dropdown"
+                                title="Font Size"
+                                ><i class="fa fa-text-height"></i>&nbsp;<b
+                                  class="caret"
+                                ></b
+                              ></a>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a data-edit="fontSize 5"
+                                    ><font size="5">Huge</font></a
+                                  >
+                                </li>
+                                <li>
+                                  <a data-edit="fontSize 3"
+                                    ><font size="3">Normal</font></a
+                                  >
+                                </li>
+                                <li>
+                                  <a data-edit="fontSize 1"
+                                    ><font size="1">Small</font></a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="btn-group">
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="bold"
+                                title="Bold (Ctrl/Cmd+B)"
+                                ><i class="fa fa-bold"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="italic"
+                                title="Italic (Ctrl/Cmd+I)"
+                                ><i class="fa fa-italic"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="strikethrough"
+                                title="Strikethrough"
+                                ><i class="fa fa-strikethrough"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="underline"
+                                title="Underline (Ctrl/Cmd+U)"
+                                ><i class="fa fa-underline"></i
+                              ></a>
+                            </div>
+                            <div class="btn-group">
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="insertunorderedlist"
+                                title="Bullet list"
+                                ><i class="fa fa-list-ul"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="insertorderedlist"
+                                title="Number list"
+                                ><i class="fa fa-list-ol"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="outdent"
+                                title="Reduce indent (Shift+Tab)"
+                                ><i class="fa fa-dedent"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="indent"
+                                title="Indent (Tab)"
+                                ><i class="fa fa-indent"></i
+                              ></a>
+                            </div>
+                            <div class="btn-group">
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="justifyleft"
+                                title="Align Left (Ctrl/Cmd+L)"
+                                ><i class="fa fa-align-left"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="justifycenter"
+                                title="Center (Ctrl/Cmd+E)"
+                                ><i class="fa fa-align-center"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="justifyright"
+                                title="Align Right (Ctrl/Cmd+R)"
+                                ><i class="fa fa-align-right"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="justifyfull"
+                                title="Justify (Ctrl/Cmd+J)"
+                                ><i class="fa fa-align-justify"></i
+                              ></a>
+                            </div>
+                            <div class="btn-group">
+                              <a
+                                class="btn btn-default btn-sm dropdown-toggle"
+                                data-toggle="dropdown"
+                                title="Hyperlink"
+                                ><i class="fa fa-link"></i
+                              ></a>
+                              <div class="dropdown-menu">
+                                <div class="input-group m-l-xs m-r-xs">
+                                  <input
+                                    class="form-control input-sm"
+                                    placeholder="URL"
+                                    type="text"
+                                    data-edit="createLink"
+                                  />
+                                  <div class="input-group-btn">
+                                    <button
+                                      class="btn btn-default btn-sm"
+                                      type="button"
+                                    >
+                                      Add
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="unlink"
+                                title="Remove Hyperlink"
+                                ><i class="fa fa-cut"></i
+                              ></a>
+                            </div>
+                            <div class="btn-group hide">
+                              <a
+                                class="btn btn-default btn-sm"
+                                title="Insert picture (or just drag & drop)"
+                                id="pictureBtn"
+                                ><i class="fa fa-picture-o"></i
+                              ></a>
+                              <input
+                                type="file"
+                                data-role="magic-overlay"
+                                data-target="#pictureBtn"
+                                data-edit="insertImage"
+                              />
+                            </div>
+                            <div class="btn-group">
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="undo"
+                                title="Undo (Ctrl/Cmd+Z)"
+                                ><i class="fa fa-undo"></i
+                              ></a>
+                              <a
+                                class="btn btn-default btn-sm"
+                                data-edit="redo"
+                                title="Redo (Ctrl/Cmd+Y)"
+                                ><i class="fa fa-repeat"></i
+                              ></a>
+                            </div>
+                          </div>
+                          <div
+                            id="editor"
+                            class="form-control"
+                            style="
+                              overflow: scroll;
+                              height: 150px;
+                              max-height: 150px;
+                            "
+                          >
+                            Enter Additional Description If have Any&hellip;
+                          </div>
+                        </div>
+                      </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-2">
+                          <button type="submit" class="btn btn-default">
+                            Cancel
+                          </button>
+                          <button type="submit" class="btn btn-primary">
+                            Create
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </section>
+              </section>
+            </section>
+            <a
+              href="#"
+              class="hide nav-off-screen-block"
+              data-toggle="class:nav-off-screen,open"
+              data-target="#nav,html"
+            ></a>
+          </section>
+        </section>
+      </section>
+    </section>
+    <!-- Bootstrap -->
+    <!-- App -->
+    <script src="js/app.v1.js"></script>
+    <div class="modal fade" id="modal-form">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body wrapper-lg">
+            <div class="row">
+              <div class="col-sm-6 b-r">
+                <h3 class="m-t-none m-b">Sign in</h3>
+                <p>Sign in to meet your friends.</p>
+                <form role="form">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="checkbox m-t-lg">
+                    <button
+                      type="submit"
+                      class="btn btn-sm btn-success pull-right text-uc m-t-n-xs"
+                    >
+                      <strong>Log in</strong>
+                    </button>
+                    <label> <input type="checkbox" /> Remember me </label>
+                  </div>
+                </form>
+              </div>
+              <div class="col-sm-6">
+                <h4>Not a member?</h4>
+                <p>
+                  You can create an account
+                  <a href="#" class="text-info">here</a>
+                </p>
+                <p>OR</p>
+                <a href="#" class="btn btn-primary btn-block m-b-sm"
+                  ><i class="fa fa-facebook pull-left"></i>Sign in with
+                  Facebook</a
+                >
+                <a href="#" class="btn btn-info btn-block m-b-sm"
+                  ><i class="fa fa-twitter pull-left"></i>Sign in with
+                  Twitter</a
+                >
+                <a href="#" class="btn btn-danger btn-block"
+                  ><i class="fa fa-google-plus pull-left"></i>Sign in with
+                  Google+</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- datepicker -->
+    <script src="js/datepicker/bootstrap-datepicker.js"></script>
+    <!-- slider -->
+    <script src="js/slider/bootstrap-slider.js"></script>
+    <!-- file input -->
+    <script src="js/file-input/bootstrap-filestyle.min.js"></script>
+    <!-- wysiwyg -->
+    <script src="js/wysiwyg/jquery.hotkeys.js"></script>
+    <script src="js/wysiwyg/bootstrap-wysiwyg.js"></script>
+    <script src="js/wysiwyg/demo.js"></script>
+    <!-- markdown -->
+    <script src="js/markdown/epiceditor.min.js"></script>
+    <script src="js/markdown/demo.js"></script>
+    <script src="js/chosen/chosen.jquery.min.js"></script>
+    <script src="js/spinner/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="js/typehead/typeahead.bundle.min.js"></script>
+    <script src="js/typehead/demo.js"></script>
+    <script src="js/app.plugin.js"></script>
+  </body>
+</html>
