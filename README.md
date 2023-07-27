@@ -1,7 +1,7 @@
 <br />
  <p align="center">
     <img src="./logo.png" alt="Logo" width="207" height="47" />
-    <h3 align="center "><a href="https://react-e-commerce-client-by-miraz.netlify.app" target="_blank" >E-Commerce Project</a></h3>
+    <h3 align="center "><a href="https://react-e-commerce-by-miraz.netlify.app" target="_blank" >E-Commerce Project</a></h3>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -28,11 +28,7 @@
    ```sh
    cd react-bootcamp-html-e-commerce
    ```
-4. Checkout/Switch to branch "client" or "server"
-   ```sh
-   git checkout client
-   ```
-5. Run the index.html file with Visual Studio Code [Live Server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+4. Run the index.html file with Visual Studio Code [Live Server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 <br>
 
@@ -40,9 +36,7 @@
 
 ## ![liveLinkIcon][live-link-icon-shield] LIVE LINK
 
-#### Client: https://react-e-commerce-client-by-miraz.netlify.app
-
-#### Server: https://react-e-commerce-server-by-miraz.netlify.app
+#### URL: https://react-e-commerce-by-miraz.netlify.app
 
 <br>
 
